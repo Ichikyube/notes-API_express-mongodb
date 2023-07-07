@@ -1,5 +1,4 @@
 const { MongoClient } = require("mongodb");
-const db = require('../config/db');
 const connectionString = process.env.DATABASE_URI || "";
 
 async function performOperation(operation) {
@@ -24,4 +23,4 @@ async function performOperation(operation) {
   }
 }
 
-export default db;
+module.exports = performOperation;
